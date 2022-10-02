@@ -131,12 +131,12 @@ fun RestaurantCard(restaurant: Restaurant, modifier: Modifier = Modifier) {
                         style = MaterialTheme.typography.h6, maxLines = 1)
                     Text(text = LocalContext.current.getString(restaurant.restaurantDetail),
                         modifier = Modifier.padding(horizontal = 5.dp),
-                        style = MaterialTheme.typography.subtitle1, maxLines = 1)
+                        maxLines = 1)
                 }
                 Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                     RatingBox(restaurant = restaurant)
                     Spacer(modifier = Modifier.height(2.dp))
-                    Text(text = LocalContext.current.getString(restaurant.resPrice))
+                    Text(text = LocalContext.current.getString(restaurant.resPrice), style = MaterialTheme.typography.subtitle2)
                 }
 
             }
